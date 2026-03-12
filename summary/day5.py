@@ -44,8 +44,12 @@ for n_neighbors, ax in zip([1,3,9], axes):
   ax.set_ylabel("타깃")
 axes[0].legend(["모델 예측", "훈련 데이터/타깃" , "테스트 데이터/타깃"], loc="best"
 plt.show()
-               
+
 - 32.py
+               
+mglearn.plots.plot_linear_regression_wave()
+               
+- 33.py
 from sklearn.linear_model import LinearRegression
 X,y : mglearn.datasets.make_wave(n_samples=60)
 
@@ -59,7 +63,7 @@ print("lr.intercept_ :" , lr.intercept_)
 print("훈련 세트 점수 : {: 2f}".format(lr.score(X_train, y_train)))
 print("테스트 세트 점수 : {: 2f}".format(lr.score(X_test, y_test)))
 
-- 33.py
+- 34.py
 
 X,y : mglearn.datasets.load_extended_boston()
 
